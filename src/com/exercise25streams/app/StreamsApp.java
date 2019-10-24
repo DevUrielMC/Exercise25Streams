@@ -21,10 +21,12 @@ public class StreamsApp
 			myReader= new FileReader (myFile);
 			myBuffer = new BufferedReader(myReader);
 			line=myBuffer.readLine();
-			//System.out.println(line);
+			//System.out.println(line);					imprime solo la primera linea
 			
-			while((line= myBuffer.readLine())!=null)
+			while((line= myBuffer.readLine())!=null)	//ciclo para mostrar todo el texto
 			{
+				line.toUpperCase();						//las convierte en mayusculas
+				line =line.replace("O", "W");			//remplaza las o por las u.
 				System.out.println(line);
 			}
 		} catch (IOException e) {
